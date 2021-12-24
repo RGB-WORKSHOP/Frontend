@@ -6,7 +6,7 @@ import * as S from './styles'
 
 interface Props {}
 
-const Header: FC<Props> = () => {
+export const Header: FC<Props> = () => {
     const dispatch = useDispatch()
     const [scroll, setScroll] = useState(0)
 
@@ -17,8 +17,14 @@ const Header: FC<Props> = () => {
     }, [])
 
     return (
-        <>
-            <S.Header />
-        </>
+        <S.Header>
+            <S.HeaderContent>
+                <S.HeaderLeftContent>RGB WORKSHOP</S.HeaderLeftContent>
+                <S.HeaderRightContent>
+                    <div>LOGIN</div>
+                    <div>REGISTER</div>
+                </S.HeaderRightContent>
+            </S.HeaderContent>
+        </S.Header>
     )
 }
